@@ -31,7 +31,8 @@
     "remark-lint-no-dead-urls": "^1.1.0",
     "remark-math": "6",
     "remark-validate-links": "^13.0.1",
-    "remark-validate-links-heading-id": "^0.0.3"
+    "remark-validate-links-heading-id": "^0.0.3",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.5.2"

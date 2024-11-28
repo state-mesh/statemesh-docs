@@ -12,7 +12,7 @@ module.exports = {
     onBrokenMarkdownLinks: 'throw',
     favicon: 'img/favicon.ico',
     organizationName: 'statemesh', // Usually your GitHub org/user name.
-    projectName: 'docs', // Usually your repo name.
+    projectName: 'statemesh-docs', // Usually your repo name.
     trailingSlash: false,
     markdown: {
         mermaid: true,
