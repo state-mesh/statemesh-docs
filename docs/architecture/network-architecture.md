@@ -4,94 +4,88 @@ title: "Network Architecture"
 
 # Network Architecture
 
-StateMesh's network architecture is designed for decentralized operation, high availability, and secure communication between all components.
+StateMesh's network architecture is designed for global scale, high performance, and security.
 
-## Regional Structure
+## Geographic Distribution
 
-### Region Organization
-* Distributed global regions
-* Local clustering
-* Proximity-based routing
-* Regional redundancy
+### Regions
+* Maximum 20 geographic zones including:
+    * eu-central
+    * eu-north
+    * us-east
+    * us-west
+    * singapore
+    * hongkong
+    * mumbai
+    * [other regions]
 
-### Node Distribution
-* Geographic distribution
-* Region assignment
-* Cross-region communication
-* Failover mechanisms
+### Cluster Organization
+* Each region supports up to 10 clusters
+* Per cluster capacity:
+    * Maximum 5,000 nodes
+    * Maximum 150,000 pods
+    * Configurable CIDR for pod networking
 
 ## Network Components
 
-1. **Core Infrastructure**
-* Central coordination nodes
-* Regional controllers
-* Edge nodes
-* Gateway services
+### Core Infrastructure
+* WireGuard-based mesh networking
+    * High-availability WireGuard servers per region
+    * netmaker.io integration for dynamic peer management
+    * Automated peer addition/removal
 
-2. **Communication Layers**
-* Control plane
-* Data plane
-* Management layer
-* Monitoring system
+### Kubernetes Networking
+* Cilium as primary CNI driver
+    * eBPF capability for near-native performance
+    * Advanced networking features
+    * Enhanced security through network policies
 
-### Network Services
-* DNS resolution
-* Load balancing
-* Traffic routing
-* Service discovery
+### Network Optimization
+* MTU optimization considerations for:
+    * WireGuard overlay
+    * Cilium networking
+    * Operator node configuration
+* Preference for eBPF over VXLAN
+* iptables rules when necessary
 
-## Communication Protocol
+## Security Architecture
 
-1. **Internal Communication**
-* Node-to-node messaging
-* Control plane protocol
-* Data synchronization
-* State management
+### Zero-Trust Environment
+* All nodes operate in zero-trust mode
+* TPM/vTPM integration for security
+* Node classification (strong/weak) based on security capabilities
 
-2. **External Communication**
-* API endpoints
-* Client connections
-* External services
-* Third-party integration
+### Encryption
+* End-to-end encryption for all traffic
+* Attestation-enhanced TLS (aTLS)
+* Encrypted storage for sensitive data
 
-## Network Security
+### Network Isolation
+* Firewall rules for inter-node communication
+* Network segmentation
+* Pod-level network policies
 
-### Security Measures
-* Traffic encryption
-* Access control
-* DDoS protection
-* Intrusion detection
+## High Availability
 
-### Protocol Security
-* TLS implementation
-* Certificate management
-* Key rotation
-* Security policies
+### Network HA
+* Multi-server WireGuard setup
+* BIRD for advanced routing (when needed)
+* Cross-region connectivity
 
-## Performance
-
-1. **Optimization**
-* Route optimization
+### Cluster HA
+* Multiple clusters per region
 * Load distribution
-* Traffic management
-* Resource allocation
+* Failover capabilities
 
-2. **Monitoring**
-* Network metrics
-* Performance tracking
-* Latency monitoring
-* Bandwidth usage
+## Performance Considerations
 
-## Best Practices
+### Network Performance
+* eBPF prioritization for performance
+* Minimal use of VXLAN
+* Optimized MTU configuration
+* Direct routing where possible
 
-### Implementation
-* Region selection
-* Network configuration
-* Security setup
-* Performance tuning
-
-### Maintenance
-* Regular updates
-* Performance monitoring
-* Security reviews
-* Documentation
+### Best Practices
+* MTU configuration guidelines
+* Network optimization recommendations
+* Performance monitoring setup

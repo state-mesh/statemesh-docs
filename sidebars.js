@@ -37,6 +37,16 @@ module.exports = {
                     type: 'doc',
                     label: 'Technical Requirements',
                     id: 'architecture/technical-requirements',
+                },
+                {
+                    type: 'doc',
+                    label: 'Regional Architecture',
+                    id: 'architecture/regional-architecture-guide'
+                },
+                {
+                    type: 'doc',
+                    label: 'Cluster Management',
+                    id: 'architecture/cluster-management-guide'
                 }
             ]
         },
@@ -176,6 +186,22 @@ module.exports = {
                     type: 'doc',
                     label: 'Compliance Guide',
                     id: 'security/compliance-guide',
+                },
+                {
+                    type: 'doc',
+                    label: 'TPM/Security Implementation',
+                    id: 'security/tpm-security-implementation',
+                }
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Networking',
+            items: [
+                {
+                    type: 'doc',
+                    label: 'Network Configuration Guide',
+                    id: 'networking/network-configuration-guide',
                 }
             ]
         },

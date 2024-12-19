@@ -4,56 +4,91 @@ title: "Node Operations"
 
 # Node Operations
 
-Node operations in StateMesh encompass the core functionalities required to participate as a node operator in the network. This section provides comprehensive guidance on becoming a node operator, registering nodes, and configuring them for optimal performance.
+## Initial Setup Requirements
 
-## Overview
+### System Requirements
+* Ubuntu 22.04 LTS (required)
+* Root or sudo access
+* Clean system state
+* No existing X environment
+* No active shell sessions
 
-Node operators are essential participants in the StateMesh ecosystem who provide computational resources to the network. They can contribute through:
+### Network Requirements
+* Stable internet connection
+* Open required ports
+* Ability to join mesh network
+* Geographic region accessibility
 
-* Virtual machines from cloud providers
-* Bare metal servers
-* Existing infrastructure
+## Node Registration Process
 
-Each node operator maintains their infrastructure while earning rewards through:
-* Regular stablecoin payments (USDT)
-* Optional ERC-20 token payments
-* Performance-based incentives
+### Pre-Installation Checks
+* System verifies there's no X environment
+* Checks for existing shell sessions
+* Confirms root/sudo access
+* Validates system resources
 
-## Key Components
+### Installation Steps
+1. Obtain installation command from StateMesh console
+```
+ curl -sfLH "SM_ID: your_key" http://[region-address]:8080/api/start | sh -
+```
+2. The mesh binary performs:
+* Prerequisites validation
+* Environment security checks
+* System process management
+* Network configuration
+* Storage encryption setup
 
-### Tower Service
-Every node operator must run the StateMesh Tower Service to:
-* Join the global miner pool
-* Submit regular proofs of operation
-* Maintain their Time Tower height
-* Participate in workload distribution
+### Post-Installation
+* Node appears in dashboard
+* Temporary password generation
+* Certificate storage in TPM
+* Network configuration completion
 
-### Node Registration
-Operators can register nodes through two primary methods:
-* New VM registration - For cloud-based deployments
-* Existing machine registration - For bare metal or pre-existing VMs
+## Node Security
 
-### Pricing Configuration
-Operators have control over their resource pricing:
-* CPU pricing (per hour)
-* Storage pricing (per GB/month)
-* Network pricing (per TB)
-* GPU pricing (when applicable)
+### Process Protection
+* Installation process cannot be killed
+* Protected against interruption
+* Requires reboot for changes
+* Automatic process monitoring
 
-### Performance Metrics
-Node performance is tracked through several key indicators:
-* Tower height - Indicating sustained participation
-* Active workloads - Current resource utilization
-* Reservation rate - Resource commitment level
-* Availability - Operational uptime
+### Network Protection
+* Private network configuration
+* Firewall rules establishment
+* Geographic zone assignment
+* Inter-node communication rules
 
-## Getting Started
+### Storage Security
+* Encrypted block device creation
+* Local key generation
+* Memory wiping after mount
+* Boot persistence configuration
 
-To begin operating nodes on StateMesh:
-1. Choose your infrastructure approach (new VM or existing machine)
-2. Complete the node registration process
-3. Configure pricing and operational parameters
-4. Start the Tower Service
-5. Monitor performance and earnings
+## Node Maintenance
 
-Each of these steps is covered in detail in the subsequent sections of this documentation.
+### Regular Operations
+* Monitor node status
+* Check resource usage
+* Verify proof submissions
+* Track earnings
+
+### Security Monitoring
+* Check process integrity
+* Monitor network status
+* Verify encryption status
+* Track authentication attempts
+
+## Best Practices
+
+### Operational Guidelines
+* Regular system updates
+* Performance monitoring
+* Security verification
+* Resource optimization
+
+### Performance Optimization
+* Network tuning
+* Resource allocation
+* Storage management
+* Process prioritization
