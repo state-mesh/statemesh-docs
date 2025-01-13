@@ -1,158 +1,93 @@
 ---
-title: "Application Deployment"
+title: "Deploying Applications"
 ---
 
-# Application Deployment
+# Deploying Applications
 
-StateMesh provides a flexible platform for deploying containerized applications. This guide covers the deployment process, configuration options, and best practices.
+Follow this guide to deploy your first application on StateMesh.
+
+## Before You Begin
+
+Requirements:
+* USDT balance for deployments
+* Container image ready
+* Application configuration
+* Selected deployment region
 
 ## Deployment Options
 
-StateMesh offers two primary deployment methods:
+### 1. Custom Application
+Create your deployment from scratch with full configuration control
 
-1. **Predefined Applications**
-    * Ready-to-use application templates
-    * Pre-configured settings
-    * Quick deployment process
-    * Standard configurations
+Required information:
+* Application name (3-50 characters)
+* Description (up to 250 characters)
+* Deployment zone
+* Resource requirements
 
-2. **Custom Applications**
-    * Full configuration control
-    * Custom container settings
-    * Advanced networking options
-    * Custom resource allocation
+### 2. Popular Templates
 
-## Application Configuration
+Available templates include:
 
-### Basic Settings
-* Application name
-* Project association
-* Description
-* Number of replicas
-* Deployment region
+WordPress:
+* Content management system
+* No coding required
+* Website building platform
+* Popular CMS solution
 
-### Scheduling Rules
-* Node selection criteria
-* Replica distribution
-* Restart policies
-* Resource constraints
+Matomo:
+* Privacy-focused analytics
+* Alternative to Google Analytics
+* No privacy sacrifices
+* Own your data
 
-### Container Configuration
-* Container image selection
-* Port configuration
-* Environment variables
-* Resource limits:
-    * CPU allocation
-    * Memory limits
-    * Storage quotas
-    * GPU requirements
+Jupyter:
+* Web-based computing
+* Interactive notebooks
+* Data analysis platform
+* Development environment
 
-## Storage Options
+FlowiseAI:
+* LLM orchestration
+* AI workflow builder
+* Custom agents
+* Low-code tool
 
-StateMesh provides three storage configurations:
+## Deployment Steps
 
-1. **Bring Your Own Storage**
-    * S3-compatible storage
-    * Custom storage endpoints
-    * Full storage control
-    * Data persistence
+### Step 1: Basic Configuration
 
-2. **Ephemeral Storage**
-    * Temporary storage
-    * Destroyed with container
-    * Fast I/O performance
-    * No persistence
+```
+name: myapp
+description: My application description
+zone: eu-central
+version: 1.0
+```
+### Step 2: Resource Configuration
 
-3. **Managed Storage**
-    * Platform-managed volumes
-    * Automatic backups
-    * Data replication
-    * Simplified management
+```
+resources:
+cpu: 2
+memory: 4Gi
+storage: 50Gi
+gpu: optional
+```
+### Step 3: Network Configuration
 
-## Billing Configuration
-
-Configure application billing:
-
-1. **Payment Methods**
-    * USDT payments
-    * Token payments
-    * Mixed payment options
-
-2. **Cost Management**
-    * Resource cost estimation
-    * Budget limits
-    * Usage monitoring
-    * Cost optimization
-
-## Application Management
-
-### Monitoring
-* Resource usage tracking
-* Performance metrics
-* Log management
-* Alert configuration
-
-### Configuration Management
-* Settings updates
-* Scale management
-* Version control
-* Deployment tracking
-
-### Access Control
-* Shell access
-* Log access
-* Monitoring access
-* Configuration access
-
-## Best Practices
-
-1. **Resource Planning**
-    * Accurate resource estimation
-    * Proper scaling configuration
-    * Cost optimization
-    * Performance monitoring
-
-2. **Security**
-    * Access control implementation
-    * Secret management
-    * Network security
-    * Regular updates
-
-3. **Monitoring**
-    * Resource usage tracking
-    * Performance monitoring
-    * Cost tracking
-    * Alert configuration
-
-## Troubleshooting
-
-Common deployment issues:
-
-* **Resource Constraints**
-    * Verify resource availability
-    * Check quota limits
-    * Adjust resource requests
-    * Monitor usage patterns
-
-* **Network Issues**
-    * Check connectivity
-    * Verify port configurations
-    * Review security settings
-    * Test network access
-
-* **Storage Problems**
-    * Verify storage availability
-    * Check permissions
-    * Monitor capacity
-    * Review mount points
-
-## Next Steps
+```
+networking:
+ports:
+- port: 80
+  as: 80
+  ingress:
+  enabled: true
+  host: myapp.example.com
+```
+## Managing Your Application
 
 After deployment:
+* Monitor through dashboard
+* View logs and metrics
+* Access via endpoint
+* Scale resources as needed
 
-1. Monitor application health
-2. Configure alerts
-3. Review performance metrics
-4. Optimize resources
-
-For detailed monitoring information, see the Application Monitoring guide.

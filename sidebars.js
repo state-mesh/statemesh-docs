@@ -16,6 +16,11 @@ module.exports = {
             id: 'time-towers'
         },
         {
+            type: 'doc',
+            label: 'Getting Started with Statemesh',
+            id: 'getting-started'
+        },
+        {
             type: 'category',
             label: 'Architecture',
             link: {
@@ -221,6 +226,19 @@ module.exports = {
                     type: 'doc',
                     label: 'API Documentation',
                     id: 'reference/api-documentation',
+                }
+            ]
+        },{
+            type: 'category',
+            label: 'Wallet',
+            link: {
+                type: 'generated-index',
+            },
+            items: [
+                {
+                    type: 'doc',
+                    label: 'wallet-management',
+                    id: 'wallet/wallet-management',
                 }
             ]
         },
