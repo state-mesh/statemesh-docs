@@ -1,7 +1,6 @@
 ---
 title: "Node Registration"
 ---
-
 Troubleshoot common issues
 
 # Common Issues
