@@ -2,37 +2,8 @@
 title: "Node Registration"
 ---
 
-[//]: # (import Figure from '@site/src/components/figure';)
+Guide for registering an existing machine as a node in the StateMesh system.
 
-# Node Registration
-
-Node registration in StateMesh can be accomplished through two primary methods: registering a new virtual machine or registering an existing machine. This guide covers both processes in detail.
-
-## Registering a New Virtual Machine
-
-The process of registering a new VM consists of several steps:
-
-1. **Provider Selection**
-* From the Dashboard, select "Register node"
-* Choose "Register new VM"
-* Select your preferred cloud provider
-* Choose the region closest to your location
-
-2. **VM Configuration**
-* Select instance type based on your needs
-* Configure basic settings:
-    * CPU allocation
-    * Memory size
-    * Storage capacity
-    * Network requirements
-
-3. **Node Setup**
-* Follow provider-specific VM creation steps
-* Wait for VM provisioning to complete
-* System will configure necessary components:
-    * Operating system setup
-    * Network configuration
-    * Security settings
 
 ## Registering an Existing Machine
 
