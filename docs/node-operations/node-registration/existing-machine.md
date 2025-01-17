@@ -4,72 +4,69 @@ title: "Node Registration"
 
 Guide for registering an existing machine as a node in the StateMesh system.
 
+# Registering an Existing Machine
 
-## Registering an Existing Machine
+## Step 1: Navigate to Existing Machine Registration
 
-For operators with existing infrastructure:
+* Navigate to the **"Register Node"** section in the StateMesh interface.
 
-1. **Prerequisites Check**
-* Ensure SSH access with root or sudoers privileges
-* Verify machine meets minimum requirements
-* Check network connectivity
+* Select **"An Existing Machine"**.
 
-2. **Registration Process**
-* Select "Register existing machine" option
-* Follow the machine connection instructions
-* * Run the registration command:
+* You will be redirected directly to Step 3.
+
+![Register existing machine](./images/register_existing_machine.png)
+
+## Step 2: Connect and Register the Machine
+
+1. **Prepare Your Existing Machine**:
+
+* Ensure that your existing machine meets the system requirements for StateMesh.
+
+* In this example, we use an Ubuntu Server virtual machine.
+
+2. **Run the Registration Command**:
+
+* Log in to your existing machine via SSH:
 ```bash
-curl -sfLH "SM_ID: your_key" http://86.125.10.243:8080/api/start | sh - 
+  `ssh root@<PUBLIC_IP>`
 ```
-3. **Verification**
-* Wait for the installer to complete
-* System will automatically disconnect
-* Node will appear in your Dashboard
+Replace `<PUBLIC_IP>` with the public IP address of your machine.
 
-## Post-Registration Steps
+* If you are not logged in as the root user, switch to root by running:
+```bash
+sudo -i
+```
+* Copy the registration command provided in the StateMesh interface and execute it:
+```bash
+curl -ksfLH "SM_ID: 8328779677220605192" https://api.eu-central-1.statemesh.net/api/start | sh -
+```
 
-After successful registration:
+![Run command](./images/run_vm_existing_machine.png)
 
-1. **Node Verification**
-* Check node status in Dashboard
-* Verify connectivity
-* Test basic operations
+3. **Monitor the Installation Process**:
 
-2. **Initial Configuration**
-* Set pricing parameters
-* Configure workload preferences
-* Setup monitoring
+* The command will download and set up the necessary StateMesh components.
 
-3. **Tower Service Activation**
-* Verify Tower Service is running
-* Monitor initial proof submissions
-* Check tower height growth
+* You will see logs similar to the screenshot below:
 
-## Common Issues
+![Logs](./images/vm_logs_existing_machine.png)
 
-If you encounter issues during registration:
+## Step 3: Verify the Registration on Dashboard
 
-* **Connection Failures**
-* Verify network connectivity
-* Check firewall settings
-* Ensure proper SSH access
+* After the registration command completes, go to the **Dashboard** in the StateMesh interface.
 
-* **Registration Timeout**
-* Check system requirements
-* Verify machine resources
-* Retry registration process
+* Confirm that the newly registered existing machine appears as active.
 
-* **Dashboard Detection**
-* Allow up to 5 minutes for appearance
-* Verify registration command execution
-* Check for error messages in logs
+![Dashboard](./images/dash_new_machine.png)
 
-## Next Steps
+## Key Notes
 
-Once registration is complete:
+* The registration command is **time-sensitive** and will expire in 60 minutes. If expired, you can generate a new command in the StateMesh interface.
 
-1. Move to node configuration
-2. Set up your pricing strategy
-3. Begin accepting workloads
+* Ensure your machine meets the minimum requirements for compatibility with StateMesh.
+
+* During the registration process, do not interrupt the installation command.
+
+ 
 
 For detailed configuration instructions, proceed to the [Node Configuration](./node-configuration) guide.
