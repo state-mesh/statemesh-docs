@@ -156,6 +156,18 @@ module.exports = {
                         type: 'doc',
                         label: 'Existing Machine Registration',
                         id: 'node-operations/node-registration/existing-machine'
+                    },{
+                        type: 'doc',
+                        label: 'Post-Registration',
+                        id: 'node-operations/node-registration/post-registration'
+                    },{
+                        type: 'doc',
+                        label: 'Common Issues',
+                        id: 'node-operations/node-registration/common-issues'
+                    },{
+                        type: 'doc',
+                        label: 'Next Steps',
+                        id: 'node-operations/node-registration/next-steps'
                     }
                     ]
                 },
