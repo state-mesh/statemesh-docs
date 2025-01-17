@@ -140,9 +140,24 @@ module.exports = {
                     id: 'node-operations/becoming-an-operator',
                 },
                 {
-                    type: 'doc',
+                    type: 'category',
                     label: 'Node Registration',
-                    id: 'node-operations/node-registration',
+                    link: {
+                        type: 'generated-index',
+                        title: 'Node Registration Overview', // Add a custom title for the index page
+                        description: 'Overview of node registration including steps for new and existing machines.', // Optional
+                        slug: '/node-operations/node-registration',
+                    },
+                    items: [{
+                        type: 'doc',
+                        label: 'New Machine Registration',
+                        id: 'node-operations/node-registration/new-machine'
+                    },{
+                        type: 'doc',
+                        label: 'Existing Machine Registration',
+                        id: 'node-operations/node-registration/existing-machine'
+                    }
+                    ]
                 },
                 {
                     type: 'doc',
@@ -228,7 +243,7 @@ module.exports = {
                     id: 'reference/api-documentation',
                 }
             ]
-        },{
+        }, {
             type: 'category',
             label: 'Wallet',
             link: {
