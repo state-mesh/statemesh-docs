@@ -87,3 +87,7 @@ html[data-theme='dark'] .header-github-link:before {
 .asciinema-theme-edgeless .bg-fg {    /* inverse for terminal background color */
   background-color: #ffffff; /* controls color of the cursor */
 }
+
+.m-0 {
+  margin: 0 !important;
+}

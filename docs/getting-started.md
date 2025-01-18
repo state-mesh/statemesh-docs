@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with StateMesh"
+title: "Getting Started"
 ---
 
 # Getting Started

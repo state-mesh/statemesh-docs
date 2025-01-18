@@ -2,56 +2,27 @@ module.exports = {
     mySidebar: [
         {
             type: 'doc',
-            label: 'StateMesh',
             id: 'main'
         },
         {
             type: 'doc',
-            label: 'Intro',
-            id: 'introduction'
-        },
-        {
-            type: 'doc',
-            label: 'Time Towers',
-            id: 'time-towers'
-        },
-        {
-            type: 'doc',
-            label: 'Getting Started with Statemesh',
             id: 'getting-started'
         },
         {
             type: 'category',
             label: 'Architecture',
             link: {
-                type: 'generated-index',
+                type: 'generated-index'
             },
-            collapsed: false,
+            collapsed: true,
             items: [
                 {
                     type: 'doc',
-                    label: 'Overview',
-                    id: 'architecture/overview',
+                    id: 'architecture/statemesh-network'
                 },
                 {
                     type: 'doc',
-                    label: 'Network Architecture',
-                    id: 'architecture/network-architecture',
-                },
-                {
-                    type: 'doc',
-                    label: 'Technical Requirements',
-                    id: 'architecture/technical-requirements',
-                },
-                {
-                    type: 'doc',
-                    label: 'Regional Architecture',
-                    id: 'architecture/regional-architecture-guide'
-                },
-                {
-                    type: 'doc',
-                    label: 'Cluster Management',
-                    id: 'architecture/cluster-management-guide'
+                    id: 'architecture/time-towers'
                 }
             ]
         },
