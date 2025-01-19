@@ -35,7 +35,6 @@ module.exports = {
             defaultMode: "dark",
             // Use user preference instead of default mode
             respectPrefersColorScheme: true,
-
             // Hides the switch in the navbar
             // Useful if you want to support a single color mode
             disableSwitch: false,
@@ -78,32 +77,58 @@ module.exports = {
             style: 'dark',
             links: [],
             copyright: `Copyright © ${new Date().getFullYear()} StateMesh Project Authors. All rights reserved.`,
-        },
-        metadata: [
-            {name: "title", content: "StateMesh Documentation"},
-            {
-                name: "description",
-                content: "Browse tutorials and guides, learn how StateMesh works and get started quickly with your first project."
-            },
-            {prefix: "og: http://ogp.me/ns#"},
-            {property: "og:type", content: "website"},
-            {property: "og:url", content: "https://docs.statemesh.net/"},
-            {property: "og:title", content: "StateMesh Documentation"},
-            {
-                property: "og:description",
-                content: "Learn how StateMesh works, deploy your first app or register your node."
-            },
-            {property: "og:image", content: "https://docs.statemesh.net/img/social-card.jpg"},
-            {property: "twitter:card", content: "summary_large_image"},
-            {property: "twitter:url", content: "https://docs.statemesh.net/"},
-            {property: "twitter:title", content: "StateMesh Documentation"},
-            {
-                property: "twitter:description",
-                content: "Learn how StateMesh works, deploy your first app or register your node."
-            },
-            {property: "twitter:image", content: "https://docs.statemesh.net/img/social-card.jpg"},
-        ]
+        }
     },
+    headTags: [
+        {
+            tagName: 'meta',
+            attributes: { name: 'keywords', content: 'cloud, decentralized, containers, dapps, web3' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'description', content: 'Browse tutorials and guides, learn how StateMesh works and get started quickly with your first project.' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:type', content: 'website' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:url', content: 'https://docs.statemesh.net' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:title', content: 'StateMesh Documentation' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:description', content: 'Learn how StateMesh works, deploy your first app or register your node.' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:image', content: 'https://docs.statemesh.net/img/social-card.jpg' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:card', content: 'summary_large_image' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:url', content: 'https://docs.statemesh.net' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:title', content: 'StateMesh Documentation' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:description', content: 'Learn how StateMesh works, deploy your first app or register your node.' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:image', content: 'https://docs.statemesh.net/img/social-card.jpg' }
+        },
+    ],
     presets: [
         [
             '@docusaurus/preset-classic',
