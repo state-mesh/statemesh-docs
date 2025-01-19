@@ -19,17 +19,6 @@ module.exports = {
     },
     themes: [
         '@docusaurus/theme-mermaid',
-        [
-            "@easyops-cn/docusaurus-search-local",
-            /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-            ({
-                docsRouteBasePath: "/",
-                hashed: true,
-                highlightSearchTermsOnTargetPage: true,
-                indexBlog: false,
-                ignoreFiles: [/release-notes\/.*/],
-            }),
-        ],
     ],
     i18n: {
         defaultLocale: "en",
@@ -83,7 +72,7 @@ module.exports = {
         // algolia: {
         //   appId: 'LLOD7N3LJA',
         //   apiKey: '4637c26b2ca6b8aeaf99a3ee421fb35c',
-        //   indexName: 'k3s',
+        //   indexName: 'statemesh',
         // },
         footer: {
             style: 'dark',
@@ -146,6 +135,5 @@ module.exports = {
         },
     ],
     plugins: [
-        require.resolve("docusaurus-lunr-search"),
     ],
 };
