@@ -1549,7 +1549,7 @@
     "@docusaurus/utils-validation" "3.6.0"
     tslib "^2.6.0"
 
-"@docusaurus/plugin-sitemap@3.6.0":
+"@docusaurus/plugin-sitemap@^3.5.2", "@docusaurus/plugin-sitemap@3.6.0":
   version "3.6.0"
   resolved "https://registry.npmjs.org/@docusaurus/plugin-sitemap/-/plugin-sitemap-3.6.0.tgz"
   integrity sha512-YB5XMdf9FjLhgbHY/cDbYhVxsgcpPIjxY9769HUgFOB7GVzItTLOR71W035R1BiR2CA5QAn3XOSg36WLRxlhQQ==
@@ -2051,6 +2051,13 @@
   version "6.4.0"
   resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-6.4.0.tgz"
   integrity sha512-6u74wi+9zeNlukrCtYYET8Ed/n9AS27DiaXCZKAD3TRGFaqiyYSsQgN2disW83pI/cM1Q2lJY1JX4YfwvNtlNw==
+
+"@mui/icons-material@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-6.4.0.tgz"
+  integrity sha512-zF0Vqt8a+Zp2Oz8P+WvJflba6lLe3PhxIz1NNqn+n4A+wKLPbkeqY8ShmKjPyiCTg0RMbPrp993oUDl9xGsDlQ==
+  dependencies:
+    "@babel/runtime" "^7.26.0"
 
 "@mui/material@^6.4.0":
   version "6.4.0"

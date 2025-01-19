@@ -36,4 +36,4 @@ An automated GH action will deploy the website to GitHub Pages once a PR has bee
 
 ## Tutorial
 https://www.freecodecamp.org/news/build-a-documentation-site-using-react-and-docusaraus/
-
+https://webreaper.dev/posts/material-ui-theme-with-docusaurus/

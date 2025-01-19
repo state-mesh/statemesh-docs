@@ -52,13 +52,28 @@ module.exports = {
             disableSwitch: false,
         },
         navbar: {
-            title: "",
+            title: "Documentation",
             logo: {
                 alt: 'logo',
                 src: 'img/logo-black.png',
                 srcDark: 'img/logo-white.png',
             },
             items: [
+                {
+                    href: "https://explorer-test.statemesh.net",
+                    position: "left",
+                    label: "Currently running in Testnet mode",
+                },
+                {
+                    href: "https://x.com/statemeshnet",
+                    position: "right",
+                    label: "Join us on X",
+                },
+                {
+                    href: "https://t.me/statemesh",
+                    position: "right",
+                    label: "Join us on Telegram",
+                },
                 {
                     type: 'search',
                     position: 'right',
@@ -75,6 +90,30 @@ module.exports = {
             links: [],
             copyright: `Copyright © ${new Date().getFullYear()} StateMesh Project Authors. All rights reserved.`,
         },
+        metadata: [
+            {name: "title", content: "StateMesh Documentation"},
+            {
+                name: "description",
+                content: "Browse tutorials and guides, learn how StateMesh works and get started quickly with your first project."
+            },
+            {prefix: "og: http://ogp.me/ns#"},
+            {property: "og:type", content: "website"},
+            {property: "og:url", content: "https://docs.statemesh.net/"},
+            {property: "og:title", content: "StateMesh Documentation"},
+            {
+                property: "og:description",
+                content: "Learn how StateMesh works, deploy your first app or register your node."
+            },
+            {property: "og:image", content: "https://docs.statemesh.net/img/social-card.jpg"},
+            {property: "twitter:card", content: "summary_large_image"},
+            {property: "twitter:url", content: "https://docs.statemesh.net/"},
+            {property: "twitter:title", content: "StateMesh Documentation"},
+            {
+                property: "twitter:description",
+                content: "Learn how StateMesh works, deploy your first app or register your node."
+            },
+            {property: "twitter:image", content: "https://docs.statemesh.net/img/social-card.jpg"},
+        ]
     },
     presets: [
         [
@@ -88,10 +127,13 @@ module.exports = {
                     rehypePlugins: [rehypeKatex],
                 },
                 blog: false, // Optional: disable the blog plugin
-                // ...
                 theme: {
                     customCss: [require.resolve("./src/css/custom.css")],
                 },
+                sitemap: {
+                    lastmod: 'date',
+                    changefreq: 'weekly',
+                }
             },
         ],
     ],

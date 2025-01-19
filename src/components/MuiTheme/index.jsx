@@ -17,20 +17,14 @@ const extTheme = extendTheme({
         light: {
             palette: {
                 primary: {
-                    main: "hsl(240, 48%, 47%)",
-                },
-                background: {
-                    paper: "hsl(240, 15%, 95%)",
+                    main: "#07a000",
                 },
             },
         },
         dark: {
             palette: {
                 primary: {
-                    main: "hsl(240, 90%, 70%)",
-                },
-                background: {
-                    paper: "hsl(210, 3%, 15%)",
+                    main: "#87ed82",
                 },
             },
         },

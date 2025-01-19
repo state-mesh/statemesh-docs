@@ -8,7 +8,9 @@ export default function Index({src, darkSrc, caption}) {
     return (
         <figure style={{padding: 20}}>
             <img src={isDarkTheme ? useBaseUrl(darkImageSrc) : useBaseUrl(src)} alt={caption}/>
+            { caption &&
             <figcaption style={{textAlign: 'center', fontWeight: 200, marginTop: '1rem'}}>{`Figure: ${caption}`}</figcaption>
+            }
         </figure>
     )
 }

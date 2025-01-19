@@ -148,6 +148,17 @@ module.exports = {
         },
         {
             type: 'category',
+            label: 'Marketing Resources',
+            items: [
+                {
+                    type: 'doc',
+                    label: 'Brand Logos',
+                    id: 'marketing/logos',
+                },
+            ]
+        },
+        {
+            type: 'category',
             label: 'Support',
             items: [
                 {
