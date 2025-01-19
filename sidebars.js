@@ -15,7 +15,7 @@ module.exports = {
         {
             type: 'category',
             label: 'Getting Started',
-            collapsed: true,
+            collapsed: false,
             items: [
                 {
                     type: 'doc',
@@ -42,7 +42,7 @@ module.exports = {
         {
             type: 'category',
             label: 'Architecture',
-            collapsed: true,
+            collapsed: false,
             items: [
                 {
                     type: 'doc',
@@ -64,7 +64,7 @@ module.exports = {
         {
             type: 'category',
             label: 'Applications ',
-            collapsed: true,
+            collapsed: false,
             items: [
                 {
                     type: 'doc',
@@ -100,7 +100,7 @@ module.exports = {
         {
             type: 'category',
             label: 'Node Operators',
-            collapsed: true,
+            collapsed: false,
             items: [
                 {
                     type: 'doc',
@@ -117,7 +117,7 @@ module.exports = {
         {
             type: 'category',
             label: 'Blockchain',
-            collapsed: true,
+            collapsed: false,
             items: [
                 {
                     type: 'doc',
@@ -163,14 +163,9 @@ module.exports = {
             items: [
                 {
                     type: 'doc',
-                    label: 'FAQs',
-                    id: 'support/faqs',
+                    label: 'Connect with us',
+                    id: 'support/connect',
                 },
-                {
-                    type: 'doc',
-                    label: 'Glossary',
-                    id: 'support/glossary',
-                }
             ]
         }
     ],
