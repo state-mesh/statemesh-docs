@@ -1,0 +1,44 @@
+---
+title: Configure your Application
+---
+import Figure from '@site/src/components/Figure';
+import {Typography} from "@mui/material";
+
+Applications support various configuration options to customize their behavior. This page provides an overview of the configuration options available for applications running on StateMesh.
+
+Application can be configured from the `Configuration` tab in the application details page.
+
+## Container image
+Every application running on StateMesh is packaged as a container image. The container image contains the application code, dependencies, and runtime environment. You can use any Docker-compatible container image.
+
+Images can be pulled either from public repositories, or from private repositories that require authentication. You can also build your own images and publish them to a public or private repository and have StateMesh use that image.
+
+<Figure
+    src="/img/snippets/container-image.png"
+    alt="Container Image"
+    caption="Choosing the container image for your application"
+/>
+
+To choose an image from [DockerHub](https://hub.docker.com) choose <Typography component="button" variant="smButton">Search DockerHub</Typography> and enter some search terms.
+
+To use a private image, choose <Typography component="button" variant="smButton">Private Registry</Typography> and enter the registry URL, username, and password.
+
+## Network
+Once you've selected your desired container image, you can configure the ports the image will expose from the **Network** section
+
+<Figure
+    src="/img/snippets/container-network.png"
+    alt="Container ports"
+    caption="Choosing the ports exposed by the container"
+/>
+
+The following options are available:
+
+- **Protocol**: TCP or UDP
+- **Name**: This is the name of the port, and is used to reference the port in other parts of the application configuration.
+- **Container Port**: The port the container is listening on.
+- **Service Port**: The port to expose the container to other containers / applications.
+- **Ingress**: Whether the port is used as the ingress port for public internet traffic to your application. If you enable this, the public DNS name of your application will route traffic to this port.
+
+You can use <Typography component="button" variant="smButton">Use default ports of image</Typography> to pre-fill all ports exposed by the container image.
+

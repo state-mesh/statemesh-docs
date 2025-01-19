@@ -5,13 +5,13 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
     title: 'StateMesh',
-    tagline: 'StateMesh: Revolutionizing Decentralized Computing',
+    tagline: 'Revolutionizing Decentralized Computing',
     url: 'https://docs.statemesh.net',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
     favicon: 'img/favicon.ico',
-    organizationName: 'statemesh', // Usually your GitHub org/user name.
+    organizationName: 'state-mesh', // Usually your GitHub org/user name.
     projectName: 'statemesh-docs', // Usually your repo name.
     trailingSlash: false,
     markdown: {
@@ -73,9 +73,7 @@ module.exports = {
         footer: {
             style: 'dark',
             links: [],
-            copyright: `Copyright © ${new Date().getFullYear()} StateMesh Project Authors. All rights reserved. <br>The Linux Foundation has registered trademarks
-      and uses trademarks. For a list of trademarks of The Linux Foundation, 
-      please see our <a href="https://www.linuxfoundation.org/trademark-usage"> Trademark Usage</a> page.`,
+            copyright: `Copyright © ${new Date().getFullYear()} StateMesh Project Authors. All rights reserved.`,
         },
     },
     presets: [

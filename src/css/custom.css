@@ -8,15 +8,19 @@
  * Fonts
  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import "primeflex/primeflex.css";
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #8B04DD;
-  --ifm-color-primary-dark: #58089E;
-  --ifm-color-primary-darker: #330663;
-  --ifm-color-primary-darkest: #1C033C;
-  --ifm-color-primary-light: #8B04DD;
-  --ifm-color-primary-lighter: #B873F4;
-  --ifm-color-primary-lightest: #E3D2FF;
+  --ifm-color-primary: #07a000;
+  --ifm-color-primary-dark: #069000;
+  --ifm-color-primary-darker: #068800;
+  --ifm-color-primary-darkest: #057000;
+  --ifm-color-primary-light: #08b000;
+  --ifm-color-primary-lighter: #08b800;
+  --ifm-color-primary-lightest: #09d000;
+
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-code-font-size: 95%;
   /* --ifm-footer-background-color: black;
@@ -27,13 +31,14 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #90FF99;
-  --ifm-color-primary-dark: #5BC95B;
-  --ifm-color-primary-darker: #238723;
-  --ifm-color-primary-darkest: #124C12;
-  --ifm-color-primary-light: #90FF99;
-  --ifm-color-primary-lighter: #D2FFD3;
-  --ifm-color-primary-lightest: #D2FFD3;
+  --ifm-color-primary: #87ed82;
+  --ifm-color-primary-dark: #68e862;
+  --ifm-color-primary-darker: #59e652;
+  --ifm-color-primary-darkest: #2bdf22;
+  --ifm-color-primary-light: #a6f2a2;
+  --ifm-color-primary-lighter: #b5f4b2;
+  --ifm-color-primary-lightest: #e3fbe2;
+
   /* --ifm-footer-background-color: black;
   --ifm-footer-link-color: white;
   --ifm-footer-title-color: white;*/
@@ -88,6 +93,3 @@ html[data-theme='dark'] .header-github-link:before {
   background-color: #ffffff; /* controls color of the cursor */
 }
 
-.m-0 {
-  margin: 0 !important;
-}

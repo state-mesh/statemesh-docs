@@ -1,0 +1,42 @@
+---
+title: "Node Classes"
+---
+
+Nodes are classified into different classes based on the resources they can provide to the network: CPU, GPU, and storage. Based on the hardware specifications of the machine you run, nodes are further classified into different types:
+
+- **Lite nodes**: These nodes run on low-end machines with limited resources like laptops or desktop computers. They are suitable for running small workloads.
+- **Virtual nodes**: These nodes run on virtual machines provided by other cloud providers. They are more reliable than lite nodes and can provide more resources, reliability and availability.
+- **Bare-metal nodes**: These nodes run on physical machines that you own or rent from a cloud provider. They provide more performance compared to virtual nodes and are suitable for running high-performance workloads.
+- **Datacenter nodes**: These are bare-metal nodes operated by data centers that provide an increased level of security and reliability and are suitable for running mission-critical workloads.
+
+Nodes are also classified based on the network connection they have:
+
+- **Public nodes**: These nodes have a public IP address and can be accessed from the internet, allowing faster routing for north-south traffic.
+- **Private nodes**: These nodes have a private IP address and can only be accessed from the internal network, providing an additional layer of security, but lower bandwidth for north-south traffic.
+
+### Compute nodes
+
+These nodes can provide CPU, GPU and RAM resources to the network. Based on the type of machine you run, you can provide different levels of compute resources:
+
+- **CPU nodes**: These nodes can provide CPU and RAM resources to the network. They
+- **GPU nodes**: These nodes can provide GPU resources to the network. GPU nodes are also **CPU nodes**.
+
+Compute nodes are also classified based on the CPU/GPU features they support:
+- **CPU Brand**: Intel / AMD
+- **CPU Features**: AVX, AVX2, AVX512 etc.
+- **Virtualization extensions**: Intel VT-x, AMD-V etc.
+- **Confidential Computing**: SGX, TPM, AMD SEV etc.
+- **GPU Brand**: Nvidia, AMD, Intel etc.
+
+All compute nodes are suitable for running containerized workloads and virtual machines.
+
+:::info
+If your CPU does not support virtualization extensions, Virtual Machines will in emulated mode which will be slower.
+:::
+
+### Storage nodes
+These nodes can provide storage resources to the network. Based on the type of machine you run, you can provide different levels of storage resources:
+
+- **SSD nodes**: These nodes can provide SSD storage resources to the network.
+- **HDD nodes**: These nodes can provide HDD storage resources to the network.
+- **NVMe nodes**: These nodes can provide NVMe storage resources to the network.

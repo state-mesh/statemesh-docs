@@ -1,0 +1,61 @@
+---
+slug: /
+title: "StateMesh Documentation"
+---
+
+import {CardActionArea, Typography} from "@mui/material";
+import Grid from '@mui/material/Grid2';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+
+Welcome to the official StateMesh documentation, where you can learn about StateMesh and start exploring its features.
+
+To navigate the StateMesh documentation, you can use one of the following methods
+
+- Use the navigation bar to browse the documentation.
+- Search for a specific topic using the search bar.
+
+<Grid container spacing={4} className={'mt-5'}>
+    <Grid size={4}>
+        <Card className='h-8rem'>
+            <CardActionArea href='../getting-started/overview'>
+                <CardContent>
+                    <Typography gutterBottom className={'font-bold'}>
+                        What is StateMesh ?
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                        Learn what StateMesh is and why we built it.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+    <Grid size={4}>
+        <Card className='h-8rem'>
+            <CardActionArea href='../getting-started/quickstart'>
+                <CardContent>
+                    <Typography gutterBottom className={'font-bold'}>
+                        Quick Start
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                        Deploy your first application in 3 minutes.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+    <Grid size={4}>
+        <Card className='h-8rem'>
+            <CardActionArea href='../architecture/global'>
+                <CardContent>
+                    <Typography gutterBottom className={'font-bold'}>
+                        Learn More
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                        Get an in-depth overview of StateMesh.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+</Grid>

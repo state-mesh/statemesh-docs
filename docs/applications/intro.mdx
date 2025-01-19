@@ -1,0 +1,35 @@
+---
+title: Applications in StateMesh
+---
+
+Please familiarize yourself with the [StateMesh Concepts](../getting-started/concepts) before proceeding.
+
+Applications in StateMesh work like a combination of Deployment, Service and Ingress in Kubernetes. An application is a collection of containers that work together. Applications are the highest-level concept in StateMesh, and they are the unit of deployment.
+
+Applications bundle together:
+
+- A collection of containers and storage resources that work together. This is the application's workload.
+- A method to load-balance incoming network traffic across containers.
+- A method to expose the application to the internet using Entrypoints.
+
+## Projects
+Projects are a way to group applications together and act as a "sandbox" for securing access to applications. They can only communicate with other applications in the same project.
+
+A default project is created for you when [create your first application](./configuration), but you can create additional projects as needed.
+
+## Entrypoints
+Entrypoints expose Applications to the outside world using a public DNS name and optionally a port. They are typically HTTP, but StateMesh supports TCP and UDP as well. For HTTP and TCP traffic, entrypoints use the SNI (Server Name Indication) to route traffic to the correct application. UDP traffic does not support SNI, so the entrypoint uses the port to route traffic.
+
+:::tip
+A typical entrypoint is a FQDN in the form `https://<app-name>-<app-id>.<zone>.statemesh.net`
+:::
+
+## Volumes
+Containers are ephemeral, meaning that they can be stopped and started without losing data. However, if a container is deleted, the data is also deleted.
+
+Volumes are the preferred way to persist data in StateMesh. Volumes are mounted into containers and are backed by a storage provider. StateMesh supports two types of storage providers:
+
+- **S3 Bucket**: volumes are stored in an S3 bucket that you provide. This is call Bring Your Own Storage (BYOS) and is useful for storing sensitive data. StateMesh does not store any data from your S3 bucket.
+- **StateMesh**: volumes are provided by StateMesh using our network storage system. The data we store is encrypted and replicated across the network. This is typically used for sensitive data, because nodes never have access to this data.
+- **Network**: volumes are stored on nodes in the StateMesh network. Network storage is a block storage system that is replicated and encrypted across the network.
+

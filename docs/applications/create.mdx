@@ -1,0 +1,34 @@
+---
+title: "Create a new Application"
+---
+Application can be created from the [StateMesh Console](https://console.cloud.statemesh.net) or using the CLI. This guide will show you how to create an application using the StateMesh Console.
+
+## Using the StateMesh Console
+The create a new application, follow these steps:
+
+1. Log in to the [StateMesh Console](https://console.cloud.statemesh.net).
+2. Click on the `Add App` link in the sidebar.
+3. Choose to start from a [Template](./marketplace) or choose **My own application** if you want to start from scratch.
+4. Provide a `Name` and an optional description for your application and choose the [availability zone](../architecture/global) where your application will run.
+5. Configure the resources for your application:
+   - **Container**: Container image for your app from a public or private repository.
+     - **Network**: Set the ports used for accessing the container.
+     - **Storage**: Add persistent volumes to your container.
+     - **Advanced**: Set environment variables, start command, and resource allocation requirements.
+   - **Advanced Settings**:
+     - **Update strategy**: Choose how the application should be updated by StateMesh
+     - **Annotations**: Labels applied to the application for filtering
+
+:::info
+The `Name` of the Application must be unique across each project. It's used for identifying the application in the cluster and for inter-application communication.
+
+Applications can communicate to each-other using `Name` as the hostname withing a project.
+:::
+
+## Using the CLI
+Install the latest version of the StateMesh CLI and run the following command:
+
+```bash
+statemesh app create
+```
+The CLI will prompt you to provide the required information for creating your application.
