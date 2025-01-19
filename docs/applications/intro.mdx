@@ -27,9 +27,11 @@ A typical entrypoint is a FQDN in the form `https://<app-name>-<app-id>.<zone>.s
 ## Volumes
 Containers are ephemeral, meaning that they can be stopped and started without losing data. However, if a container is deleted, the data is also deleted.
 
-Volumes are the preferred way to persist data in StateMesh. Volumes are mounted into containers and are backed by a storage provider. StateMesh supports two types of storage providers:
+Volumes are the preferred way to persist data in StateMesh. Volumes are mounted into containers and are backed by a storage provider. StateMesh supports the following types of storage providers:
 
 - **S3 Bucket**: volumes are stored in an S3 bucket that you provide. This is call Bring Your Own Storage (BYOS) and is useful for storing sensitive data. StateMesh does not store any data from your S3 bucket.
-- **StateMesh**: volumes are provided by StateMesh using our network storage system. The data we store is encrypted and replicated across the network. This is typically used for sensitive data, because nodes never have access to this data.
+- **StateMesh**: volumes are provided by StateMesh using our network storage system. The data we store is encrypted and replicated across multiple machines for fault tolerance. This is typically used for sensitive data, because nodes never have access to this data.
 - **Network**: volumes are stored on nodes in the StateMesh network. Network storage is a block storage system that is replicated and encrypted across the network.
+
+For more information on storage providers, see [Storage Providers](./storage-providers) page.
 

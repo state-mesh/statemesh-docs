@@ -3,9 +3,6 @@ module.exports = {
         {
             type: 'category',
             label: 'About',
-            link: {
-                type: 'generated-index',
-            },
             collapsed: false,
             items: [
                 {
@@ -18,9 +15,6 @@ module.exports = {
         {
             type: 'category',
             label: 'Getting Started',
-            link: {
-                type: 'generated-index'
-            },
             collapsed: true,
             items: [
                 {
@@ -48,9 +42,6 @@ module.exports = {
         {
             type: 'category',
             label: 'Architecture',
-            link: {
-                type: 'generated-index'
-            },
             collapsed: true,
             items: [
                 {
@@ -73,9 +64,6 @@ module.exports = {
         {
             type: 'category',
             label: 'Applications ',
-            link: {
-                type: 'generated-index'
-            },
             collapsed: true,
             items: [
                 {
@@ -97,20 +85,21 @@ module.exports = {
                     type: 'doc',
                     id: 'applications/manage',
                     label: 'Manage an App'
+                },{
+                    type: 'doc',
+                    id: 'applications/storage-providers',
+                    label: 'Storage Providers'
                 },
                 {
                     type: 'doc',
                     id: 'applications/marketplace',
-                    label: 'App Marketplace'
+                    label: 'Marketplace'
                 }
             ]
         },
         {
             type: 'category',
             label: 'Node Operators',
-            link: {
-                type: 'generated-index'
-            },
             collapsed: true,
             items: [
                 {
@@ -128,9 +117,6 @@ module.exports = {
         {
             type: 'category',
             label: 'Blockchain',
-            link: {
-                type: 'generated-index'
-            },
             collapsed: true,
             items: [
                 {
@@ -163,9 +149,6 @@ module.exports = {
         {
             type: 'category',
             label: 'Support',
-            link: {
-                type: 'generated-index',
-            },
             items: [
                 {
                     type: 'doc',

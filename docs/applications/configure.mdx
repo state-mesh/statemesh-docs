@@ -42,3 +42,29 @@ The following options are available:
 
 You can use <Typography component="button" variant="smButton">Use default ports of image</Typography> to pre-fill all ports exposed by the container image.
 
+## Storage
+The **Storage** section allows you to configure storage volumes that will be attached to the container.
+
+<Figure
+    src="/img/snippets/container-storage.png"
+    alt="Container Storage"
+    caption="Add storage volumes to your container"
+/>
+
+The following options are available:
+
+- **Name**: The name of the volume. You can create a new volume or use an existing one.
+- **Size**: The size of the volume in GB.
+- **Mount Path**: The path in the container where the volume will be mounted.
+- **Read Only**: Whether the container can write to the volume.
+- **Ephemeral**: Whether the volume is ephemeral and will be deleted when the container is stopped.
+
+:::tip
+The default storage provider for the volume is **StateMesh**, which means that volumes are provided by the StateMesh organization, using our own network storage system.
+
+The data you store with us is encrypted and replicated across multiple machines. This is typically used for sensitive data, because nodes never have access to this data.
+:::
+
+You can switch the storage provider to <Typography component="button" variant="smButton">S3 Bucket</Typography> to bring your own storage using any S3-compatible provider like AWS, Cloudflare R2, etc. StateMesh does not store any data from your S3 bucket.
+
+Please see the [Storage Providers](./storage-providers) page for more information on how each storage provider works and how to configure it.
