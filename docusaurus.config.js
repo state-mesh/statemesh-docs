@@ -110,6 +110,30 @@ module.exports = {
         },
         {
             tagName: 'meta',
+            attributes: { name: 'og:image:secure_url', content: 'https://docs.statemesh.net/img/social-card.jpg' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:image:alt', content: 'StateMesh Network' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:locale', content: 'en_US' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'og:image:type', content: 'image/jpeg' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:site', content: 'statemeshnet' }
+        },
+        {
+            tagName: 'meta',
+            attributes: { name: 'twitter:creator', content: 'statemeshnet' }
+        },
+        {
+            tagName: 'meta',
             attributes: { name: 'twitter:card', content: 'summary_large_image' }
         },
         {
