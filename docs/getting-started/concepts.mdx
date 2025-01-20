@@ -18,7 +18,9 @@ StateMesh and its Kubernetes core provides you with:
 - **Horizontal scaling**: Scale your application up and down or automatically based on CPU usage.
 
 ## What StateMesh is not
-StateMesh is more than a traditional PaaS (Platform as a Service) system. It operates both at the container and hardware levels, providing some generally applicable features common to PaaS offerings, such as deployment, scaling, load balancing, storage and virtual machines, but it also provides higher-level features that allow you to define your own application environment quickly and easily.
+StateMesh is more than a traditional IaaS (Infrastructure as a Service) system. It operates both at the container and hardware levels, providing some generally applicable features common to IaaS offerings, such as deployment, scaling, load balancing, storage and virtual machines, but it also provides higher-level features that allow you to define your own application environment quickly and easily.
+
+Having an interplay of hardware and software, StateMesh is able to offer dozens of value-added services that are not typically found in traditional IaaS systems, but more commonly found in PaaS systems like AWS/GCP/Azure etc.. These services are designed to help you build and manage complex applications that are composed of many microservices.
 
 StateMesh:
 
@@ -51,3 +53,19 @@ Virtual Machines allows you to run and manage virtual machine workloads alongsid
 :::info
 This feature is in Early Access Preview and is available to selected users only.
 :::
+
+## Blockchain
+StateMesh uses a blockchain to store the state of the network. The blockchain is a decentralized, distributed ledger that records the origin of every transaction. The blockchain is used to store the state of the network and its nodes.
+
+Nodes record their presence using Verifiable Delay Functions (VDFs). Basically nodes mine a proof every `N` number of seconds and submit it to the blockchain. Blockchain validators verify the proof and update the state of the network. Proof submitted by nodes are chained together, to create a consistent timeline of each node, which is the actual Time Tower.
+
+Time Towers are used to determine the set of nodes that will be running customer workloads in the next epoch. Some nodes will be jailed, some will be promoted, and some will be demoted.
+
+Because they don't involve any financial commitments (other than the cost of the node itself), Time Towers facilitate the bootstrapping of nodes without reliance on traditional mechanisms such as token sales, node sales or airdrops, while simultaneously mitigating vulnerability to attacks.
+
+More information on how this works is detailed in the [Time Towers](../architecture/time-towers) section.
+
+The blockchain is also the centerpiece for handling automated payments. Every user has a platform-managed wallet from where funds are transferred hourly to node operators based on the resources customers consume.
+
+## Platform Wallet
+Any user that has a StateMesh account will have an associated wallet in the platform. The wallet is managed by the platform and private keys are split into pieces stored securely in a distributed MPC network that runs on StateMesh. Transaction signing is also distributed, meaning that a minimum number of nodes must sign a transaction. Even if a single node or a database is compromised, no funds can be stolen.
