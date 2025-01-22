@@ -13,7 +13,8 @@ module.exports = {
     favicon: 'img/favicon.ico',
     organizationName: 'state-mesh', // Usually your GitHub org/user name.
     projectName: 'statemesh-docs', // Usually your repo name.
-    trailingSlash: false,
+    deploymentBranch: 'gh-pages',
+    trailingSlash: true,
     markdown: {
         mermaid: true,
     },
