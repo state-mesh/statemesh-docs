@@ -14,7 +14,7 @@ module.exports = {
     organizationName: 'state-mesh', // Usually your GitHub org/user name.
     projectName: 'statemesh-docs', // Usually your repo name.
     deploymentBranch: 'gh-pages',
-    trailingSlash: true,
+    trailingSlash: false,
     markdown: {
         mermaid: true,
     },
