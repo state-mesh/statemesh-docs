@@ -4,6 +4,7 @@ import theme from "@site/src/components/MuiTheme";
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import BrowserOnly from "@docusaurus/BrowserOnly";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 function useDataTheme() {
     const [theme, setTheme] = useState(document.documentElement.getAttribute('data-theme'));
@@ -25,18 +26,16 @@ function useDataTheme() {
 }
 
 export default function Root({ children }) {
-
-    return (
-        <BrowserOnly fallback={<div>Loading...</div>}>
-            {() => {
-                theme.defaultColorScheme= useDataTheme();
-                return (
-                    <ColorModeProvider>
-                        <InitColorSchemeScript />
-                        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-                    </ColorModeProvider>
-                )
-            }}
-        </BrowserOnly>
-    );
+    const isBrowser = useIsBrowser();
+    if (!isBrowser) {
+        return <>{children}</>;
+    } else {
+        theme.defaultColorScheme = useDataTheme();
+        return (
+            <ColorModeProvider>
+                <InitColorSchemeScript/>
+                <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            </ColorModeProvider>
+        )
+    }
 }

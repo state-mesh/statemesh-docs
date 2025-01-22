@@ -15,7 +15,7 @@ Applications bundle together:
 ## Projects
 Projects are a way to group applications together and act as a "sandbox" for securing access to applications. They can only communicate with other applications in the same project.
 
-A default project is created for you when [create your first application](./configuration), but you can create additional projects as needed.
+A default project is created for you when [create your first application](./create), but you can create additional projects as needed.
 
 ## Entrypoints
 Entrypoints expose Applications to the outside world using a public DNS name and optionally a port. They are typically HTTP, but StateMesh supports TCP and UDP as well. For HTTP and TCP traffic, entrypoints use the SNI (Server Name Indication) to route traffic to the correct application. UDP traffic does not support SNI, so the entrypoint uses the port to route traffic.

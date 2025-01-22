@@ -68,11 +68,11 @@ module.exports = {
                 }
             ],
         },
-        // algolia: {
-        //   appId: 'LLOD7N3LJA',
-        //   apiKey: '4637c26b2ca6b8aeaf99a3ee421fb35c',
-        //   indexName: 'statemesh',
-        // },
+        algolia: {
+          appId: '8EXJ6NKCKV',
+          apiKey: '7f951ba32bf4dfde8f61f505b1eae949',
+          indexName: 'statemesh',
+        },
         footer: {
             style: 'dark',
             links: [],
