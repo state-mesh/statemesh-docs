@@ -63,6 +63,18 @@ module.exports = {
         },
         {
             type: 'category',
+            label: 'Projects ',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'projects/intro',
+                    label: 'About Projects'
+                },
+            ]
+        },
+        {
+            type: 'category',
             label: 'Applications ',
             collapsed: false,
             items: [
@@ -95,6 +107,28 @@ module.exports = {
                     id: 'applications/marketplace',
                     label: 'Marketplace'
                 }
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Virtual Machines (Early Access Preview)',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'vms/intro',
+                    label: 'Introduction'
+                },
+                {
+                    type: 'doc',
+                    id: 'vms/create',
+                    label: 'Create a VM'
+                },
+                {
+                    type: 'doc',
+                    id: 'vms/manage',
+                    label: 'Manage a VM'
+                },
             ]
         },
         {

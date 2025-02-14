@@ -1,0 +1,42 @@
+---
+title: "Projects"
+---
+import Figure from '@site/src/components/Figure';
+
+Projects in StateMesh are a way to group and secure your resources. You can create multiple projects and manage them from the [StateMesh Console](https://console.cloud.statemesh.net).
+
+A project is bound to an [Availability Zone](../architecture/global.mdx#availability-zones). This means that all resources in a project are deployed in the same Availability Zone. You can choose the Availability Zone when creating a project.
+
+:::info
+Resources in a project are isolated from other projects. This means that resources in one project cannot access resources in another project, and vice versa. This isolation provides security and privacy for your resources.
+:::
+
+## Create a new Project
+To create a new project, choose the `Create...` link in the sidebar under `Projects`.
+
+Provide the `Name` and `Description` and choose the `Availability Zone` for the project.
+
+:::tip
+For the best performance and minimal latency, choose the zone nearest to you and your users
+:::
+
+<Figure
+    src="/img/snippets/project-create.png"
+    alt="Create a new Project"
+/>
+
+## Manage a Project
+To manage a project, select it from the sidebar menu.
+
+<Figure
+    src="/img/snippets/project-manage.png"
+    alt="Manage a Project"
+/>
+
+You can update the project name and description, and change the Availability Zone of the project if there are no resources deployed in the project.
+
+If you want to delete a project, you must first delete all resources in the project.
+
+:::tip
+If a project already has resources, you can view them in the `Resources` tab. The [Availability Zone](../architecture/global.mdx#availability-zones) of the project can no longer be changed once resources are deployed.
+:::
