@@ -58,6 +58,11 @@ module.exports = {
                     type: 'doc',
                     id: 'architecture/time-towers',
                     label: 'Time Towers',
+                },
+                {
+                    type: 'doc',
+                    id: 'architecture/security',
+                    label: 'Security',
                 }
             ]
         },
