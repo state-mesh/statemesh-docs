@@ -1,0 +1,29 @@
+---
+title: "Deploy to StateMesh button"
+---
+
+The ‘Deploy to StateMesh’ button enables users to deploy apps to StateMesh without leaving the web browser with minimal configuration. The button is destined to open-source project maintainers who wish to provide their customers with a quick and easy way to deploy a StateMesh app.
+
+The button is for use in README files, and is intended to serve as a replacement to a list of manual steps typically required to configure an app.
+
+#### Adding the button
+
+Add the following to your README file:
+```bash
+[![Deploy](https://console.cloud.statemesh.net/assets/layout/images/deployStateMesh_green.svg)](
+https://console.cloud.statemesh.net/deploy?appname=sample)
+```
+This specifies the button icon and the StateMesh URL for deployment.
+
+There are some query parameters available for the StateMesh URL:
+- **appName:** (Required) Will be used to name the app on StateMesh
+- **port:** (Optional) The port on which you are serving the app (Default: 80)
+- **subPath:** (Optional) A sub-path inside your repository to deploy
+
+The button icon has the following options:
+
+<img src="https://console.cloud.statemesh.net/assets/layout/images/deployStateMesh_green.svg"></img>
+
+<img src="https://console.cloud.statemesh.net/assets/layout/images/deployStateMesh_icon.svg"></img>
+
+You can see the button in action here: [Sample repository](https://github.com/state-mesh/samples)

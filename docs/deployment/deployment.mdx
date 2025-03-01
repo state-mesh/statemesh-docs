@@ -1,0 +1,64 @@
+---
+title: "Deploy to StateMesh"
+---
+
+import {CardActionArea, Typography} from "@mui/material";
+import Grid from '@mui/material/Grid2';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+
+StateMesh offers various alternatives for: building directly from source, static serving, installing an image from DockerHub and deploying an application. Visit the following sections and see how easy you can serve your app on the internet.
+
+:::info Pro tip
+
+The building pipeline is using the following logic to create and deploy your app:
+- Try to automatically build the app from sources using buildpacks for (NodeJS, Java, Go, .NET, PHP, Ruby);
+- If auto-building is not possible then check if Dockerfile is present in the root of the repository;
+- If auto-building is not possible and Dockerfile is not present then create automatically a Dockerfile with nginx for static serving;
+- Using the auto-built image, preexisting Dockerfile or the auto-generated Dockerfile deploy the app on StateMesh;
+:::
+
+<Grid container spacing={4} className={'mt-5'}>
+    <Grid size={4}>
+        <Card className='h-8rem border-1' sx={{borderColor: 'var(--ifm-color-emphasis-300)'}}>
+            <CardActionArea href='../applications/create'>
+                <CardContent>
+                    <Typography gutterBottom className={'font-bold'}>
+                        StateMesh console
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                        Learn how to create and deploy an app using the StateMesh console.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+    <Grid size={4}>
+        <Card className='h-8rem border-1' sx={{borderColor: 'var(--ifm-color-emphasis-300)'}}>
+            <CardActionArea href='../command-line/install'>
+                <CardContent>
+                    <Typography gutterBottom className={'font-bold'}>
+                        Command line
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                        Build and deploy fast from your sources using the CLI.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+    <Grid size={4}>
+        <Card className='h-8rem border-1' sx={{borderColor: 'var(--ifm-color-emphasis-300)'}}>
+            <CardActionArea href='../deployment/button'>
+                <CardContent>
+                    <Typography gutterBottom className={'font-bold'}>
+                        Deploy button
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                        See how you can create a '(Build &)Deploy to StateMesh' button.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+</Grid>

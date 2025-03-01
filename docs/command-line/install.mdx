@@ -1,0 +1,43 @@
+---
+title: "Install the CLI"
+---
+
+### Install using npm
+
+```bash
+npm install -g statemeshcli
+```
+
+### Ubuntu/Debian package
+
+Use the one-line install command:
+```bash
+curl http://smcli.s3-website.eu-central-1.amazonaws.com/install.sh | sh
+```
+
+or manually configure StateMesh apt repository and GPG key and install:
+```bash
+# add StateMesh CLI repository to apt
+echo "deb [signed-by=/usr/share/keyrings/smcli.gpg] http://smcli.s3-website.eu-central-1.amazonaws.com/release-1/ squeeze main" > /etc/apt/sources.list.d/smcli.list
+
+# install StateMesh CLI's release key for package verification
+curl http://smcli.s3-website.eu-central-1.amazonaws.com/release.key | gpg --dearmor -o /usr/share/keyrings/smcli.gpg
+
+sudo apt update
+sudo apt install -y smcli
+```
+
+### Windows installer
+
+- [Windows x64](https://s3.eu-central-1.amazonaws.com/smcli.bin/win32/smcli-v1.0.0-487408f-x64.exe)
+- [Windows arm64](https://s3.eu-central-1.amazonaws.com/smcli.bin/win32/smcli-v1.0.0-487408f-arm64.exe)
+
+### Standalone tarballs
+
+- [Linux x64](https://s3.eu-central-1.amazonaws.com/smcli.bin/smcli-v1.0.0-487408f-linux-x64.tar.gz)
+- [Linux arm64](https://s3.eu-central-1.amazonaws.com/smcli.bin/smcli-v1.0.0-487408f-linux-arm.tar.gz)
+- [Darwin x64](https://s3.eu-central-1.amazonaws.com/smcli.bin/smcli-v1.0.0-487408f-darwin-x64.tar.gz)
+- [Darwin arm64](https://s3.eu-central-1.amazonaws.com/smcli.bin/smcli-v1.0.0-487408f-darwin-arm64.tar.gz)
+- [Windows x64](https://s3.eu-central-1.amazonaws.com/smcli.bin/smcli-v1.0.0-487408f-win32-x64.tar.gz)
+- [Windows arm64](https://s3.eu-central-1.amazonaws.com/smcli.bin/smcli-v2.0.1-83d9b7c-win32-arm64.tar.gz)
+

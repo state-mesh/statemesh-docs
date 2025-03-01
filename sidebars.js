@@ -116,6 +116,40 @@ module.exports = {
         },
         {
             type: 'category',
+            label: 'Deployment ',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'deployment/deployment',
+                    label: 'Deploying on StateMesh'
+                },
+                {
+                    type: 'doc',
+                    id: 'deployment/button',
+                    label: 'Deploy button'
+                },
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Command line ',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'command-line/install',
+                    label: 'Install the CLI'
+                },
+                {
+                    type: 'doc',
+                    id: 'command-line/usage',
+                    label: 'Usage'
+                },
+            ]
+        },
+        {
+            type: 'category',
             label: 'Virtual Machines (Early Access Preview)',
             collapsed: false,
             items: [
