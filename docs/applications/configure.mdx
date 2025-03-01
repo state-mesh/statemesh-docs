@@ -99,12 +99,19 @@ You can switch the storage provider to <Typography component="button" variant="s
 
 Please see the [Storage Providers](./storage-providers) page for more information on how each storage provider works and how to configure it.
 
+### Advanced section
 
-### Start command
+#### Container type
 
-:::info
-This option is available under the **Advanced** section.
-:::
+By default, containers are **worker containers** that handle your actual app's work. If you need to perform some initialization tasks that run up to completion before your application starts you can do it using an **init container**.
+
+<Figure
+    src="/img/snippets/container-type.png"
+    alt="Container type"
+    caption="Change the type of the container"
+/>
+
+#### Start command
 
 You customize the command run by the container upon startup. By default, the container runs the default command specified in the container image.
 
@@ -119,11 +126,7 @@ The following options are available:
 - **Start command**: The command to run when the container starts. This can be a shell command or a script.
 - **Parameters**: Additional parameters to pass to the command. Note that you cannot append parameters to the command itself, you must specify them separately here.
 
-### Environment variables
-
-:::info
-This option is available under the **Advanced** section.
-:::
+#### Environment variables
 
 Use this section to configure environment variables that will be available to the container at runtime.
 
@@ -133,11 +136,12 @@ Use this section to configure environment variables that will be available to th
     caption="Add environment variables to your container"
 />
 
-### Resource allocation
-
-:::info
-This option is available under the **Advanced** section.
+:::info Predefined variables
+Predefined variables are environment variables that provide various system attributes. They are injected by default into your container and you can access them directly from your application or reference them into other environment variables using the $(\[variable\]) syntax:
+- **INGRESS_DOMAIN**: The public URL that will be used to access your application. (Some applications may need to know in advance the proxying endpoint)
 :::
+
+#### Resource allocation
 
 Use this section to configure environment variables that will be available to the container at runtime.
 
