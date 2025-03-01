@@ -58,7 +58,24 @@ module.exports = {
                     type: 'doc',
                     id: 'architecture/time-towers',
                     label: 'Time Towers',
+                },
+                {
+                    type: 'doc',
+                    id: 'architecture/security',
+                    label: 'Security',
                 }
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Projects ',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'projects/intro',
+                    label: 'About Projects'
+                },
             ]
         },
         {
@@ -95,6 +112,28 @@ module.exports = {
                     id: 'applications/marketplace',
                     label: 'Marketplace'
                 }
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Virtual Machines (Early Access Preview)',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'vms/intro',
+                    label: 'Introduction'
+                },
+                {
+                    type: 'doc',
+                    id: 'vms/create',
+                    label: 'Create a VM'
+                },
+                {
+                    type: 'doc',
+                    id: 'vms/manage',
+                    label: 'Manage a VM'
+                },
             ]
         },
         {

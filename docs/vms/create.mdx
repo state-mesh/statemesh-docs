@@ -1,0 +1,30 @@
+---
+title: "Create a new Virtual Machine"
+---
+import Figure from '@site/src/components/Figure';
+
+Virtual Machines can be created from the [StateMesh Console](https://console.cloud.statemesh.net) or using the CLI.
+
+## Using the StateMesh Console
+The create a new application, follow these steps:
+
+1. Log in to the [StateMesh Console](https://console.cloud.statemesh.net).
+2. Click on the `Create...` link in the sidebar under `Virtual Instances`
+3. Choose the project
+4. Choose the Operating System and version
+5. Provide the desired number of vCPUs, Memory and Root Disk size
+6. Choose the `Authentication Method` and provide the necessary details
+7. Set a hostname for your VM
+
+<Figure
+    src="/img/snippets/vm-create.png"
+    alt="VM Details"
+/>
+
+## Using the CLI
+Install the latest version of the StateMesh CLI and run the following command:
+
+```bash
+statemesh vm create
+```
+The CLI will prompt you to provide the required information for creating your VM.
