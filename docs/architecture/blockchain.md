@@ -18,31 +18,6 @@ The native currency of StateMesh is `MESH` and its subdivision is `wei`.
 1 MESH = 10<sup>18</sup> wei
 :::
 
-## Consensus
-The blockchain uses PoS to secure the network. Validator nodes are responsible for generating and validating blocks. In return they will receive block rewards and a percentage of transaction fees and subscription fees. Based on their performance and reputation, validator nodes are assigned a score. They are incentivized to act in accordance with the network because they are subject to penalization (slashing) if they behave maliciously.
-
-The consensus is based on the Lachesis open-source software library. Lachesis is designed to easily plug into any blockchain node written in Golang, or in any other language if provided with a wrapper. Basically, Lachesis process consensus messages from other nodes and guarantee that everyone processes the same commands in the same order. To do this, it uses a DAG aBFT consensus algorithm.
-
-Lachesis is:
-- Asynchronous: Participants have the freedom to process commands at different times.
-- Leaderless: No participant plays a 'special' role
-- Byzantine Fault-Tolerant: Supports one third of faulty nodes, including malicious behavior
-- Final: Lachesis's output can be used immediately, no need for block confirmations, etc.
-
-Lachesis is a DAG-based aBFT consensus protocol with guaranteed finality. The Lachesis protocol is leaderless achieving complete asynchrony, no round robin and no proof-of-work. Every confirmed transaction is final, unless more than 1/3W of validators are Byzantine
-
-Each Lachesis node stores a local acyclic directed graph (DAG) composed of event blocks, each of which contains transactions. In this wiki, the terms 'event' and 'event block' are sometimes used interchangebly. The DAG capturing the happens-before relationship between the events is used to calculate an exact final order of events (and hence transactions) independently on each node.
-
-Events are divided into confirmed and unconfirmed events. New events are unconfirmed, whilst usually events from past 2-3+ frames are all confirmed. For confirmed events, honest nodes can compute their exact order. Unconfirmed events can only be partially ordered.
-
-Consensus results into batches of confirmed events, where each batch of events is called a block. Blocks (or finalized blocks) forming the final chain are calculated from event blocks independently on each node. Unlike PoW, round-robin PoS, coinage PoS and sync BFT, nodes don't send blocks to each other. Only events are being synced between nodes. Validators of the network do not vote on a concrete state of the network, but instead they periodically exchange transactions and events they observe with peers.
-
-Unlike sync BFT (like pBFT), Lachesis do not use new events in current election, but instead they are used to vote for the events in 2-3+ previous virtual elections simultaneously. This leads to a smaller number of created consensus messages, as the same event is reused in different elections. Hence, Lachesis achieves a lower TTF and a smaller consensus overhead comparing to sync BFT.
-
-You can read more about Lachesis in their [paper](https://arxiv.org/abs/2108.01900).
-
-
-
 ## Epochs
 The protocol is organized in Epochs comprised of a number of (finalized) blocks. Each epoch is sealed when one of the below conditions is satisfied:
 
@@ -57,20 +32,26 @@ The lowest possible epoch number is 1.
 The chain is designed to provide fast finality, with transactions being confirmed ~ `1 second`.
 
 ## Transaction fees
-Each transaction on the blockchain requires a transaction fee paid to the network in order to prevent spam attacks. The fee is paid in the chain's native token `MESH`.
+All blockchain transactions require fees to prevent network spam attacks. On StateMesh, these fees are paid in the native `MESH` token and are calculated using gas.
 
-### Gas
-Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the blockchain. Since each transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee required to execute a transaction on StateMesh, regardless of transaction success or failure.
+### Understanding Gas
+Gas measures the computational resources required to execute operations on the blockchain. Every transaction consumes gas, which must be paid regardless of whether the transaction succeeds or fails.
 
-Gas fees are paid in the chain's native currency, `MESH`. Gas prices are denoted in `gwei`, which itself is a denomination of `MESH`:
+- **Gas Unit**: Represents computational effort needed for operations
+- **Gas Price**: Amount of `MESH` paid per unit of gas, denominated in `gwei`
 
 :::tip
 1 gwei = 10<sup>-9</sup> or 0.000000001 MESH
 :::
 
 
-### Max gas fee
-To execute a transaction on the network, users can specify a maximum limit they are willing to pay for their transaction to be executed. If the provided max fee exceeds the actual transaction fee, the sender is refunded the difference between the max fee and the actual computed fee.
+### Setting Transaction Fees
+When submitting a transaction, users specify a maximum gas fee they're willing to pay. This consists of:
+
+2. **Base Fee**: Required minimum fee set by the network
+2. **Tip**: Optional priority fee to incentivize faster processing
+
+If the actual cost is less than the specified maximum, the difference is automatically refunded to the sender.
 
 :::info
 The max fee must exceed the sum of the base fee and the tip

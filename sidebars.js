@@ -200,22 +200,12 @@ module.exports = {
                 {
                     type: 'doc',
                     id: 'blockchain/evm-diff',
-                    label: 'EVM Differences'
+                    label: 'EVM Compatibility'
                 },
                 {
                     type: 'doc',
                     id: 'blockchain/wallet',
                     label: 'Wallet'
-                },
-                {
-                    type: 'doc',
-                    id: 'blockchain/staking',
-                    label: 'Staking, Locking and Rewards'
-                },
-                {
-                    type: 'doc',
-                    id: 'blockchain/validator',
-                    label: 'Become a Validator'
                 }
             ]
         },
