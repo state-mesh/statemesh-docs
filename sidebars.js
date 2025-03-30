@@ -76,6 +76,11 @@ module.exports = {
                     id: 'projects/intro',
                     label: 'About Projects'
                 },
+                {
+                    type: 'doc',
+                    id: 'projects/profiles',
+                    label: 'Deployment profiles'
+                },
             ]
         },
         {
@@ -145,6 +150,28 @@ module.exports = {
                     type: 'doc',
                     id: 'command-line/usage',
                     label: 'Usage'
+                },
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Databases (Early Access Preview)',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'databases/intro',
+                    label: 'Introduction'
+                },
+                {
+                    type: 'doc',
+                    id: 'databases/create',
+                    label: 'Create a Database'
+                },
+                {
+                    type: 'doc',
+                    id: 'databases/manage',
+                    label: 'Manage a Database'
                 },
             ]
         },

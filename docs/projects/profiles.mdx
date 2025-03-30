@@ -1,0 +1,51 @@
+---
+title: "Deployment profiles"
+---
+import Figure from '@site/src/components/Figure';
+
+Depending on your workload's performance needs, your budget and how mission-critical is your app, you may choose from a variety of deployment profiles that will determine your final costs and infrastructure performance.
+Deployment profiles ultimately specify a required compute node affinity inside the decentralized infrastructure.
+
+A deployment profile is bound to a [Project](../projects/intro.mdx). This means that you can organize all your resources and ensure that all components of your deployment will have the same infrastructure placement (e.g: all in the same datacenter or all on your personal nodes).
+
+When you create or edit a project you will have the option to choose a different profile than the default one (HYBRID):
+<Figure
+    src="/img/snippets/deployment-profile.png"
+    alt="Create a new Project"
+/>
+
+## Profiles and their main characteristics
+
+
+#### HPC
+- High Performance Computing
+- Powerful bare-metal servers, suitable for your mission-critical enterprise apps
+- Prices may be higher than on regular deployment profiles
+:::info
+All resources in the current project will be deployed on the same datacenter.
+:::
+#### GPU
+- Powerful Graphics Processing Units
+- Dedicated for AI/ML apps. Mandatory profile for training, fine-tuning or publishing AI models
+- Prices are based on GPU compute rather than CPU
+#### CLOUD
+- Public cloud VMs
+- Reliable Virtual Machines created on well-known public clouds
+- Prices are usually considerably lower than the ones charged by competitors
+#### HYBRID
+- A mix between public cloud VMs and personal computers
+- The best option if you want to balance high performance with small costs
+- Prices are definitely considerably lower than the ones charged by competitors
+#### EDGE
+- Personal computers
+- Less reliable compute units. Being the cheapest option, this profile is perfect for non mission-critical apps
+- The cheapest compute power out there
+#### MYNODE
+- Your own StateMesh registered nodes
+- If you are also a node operator on StateMesh you can opt for your own compute for reliability and cost reduction
+- Everything you pay for this app goes directly to your wallet
+
+
+:::tip Pro tip
+If you move a resource into a different project which also has a different deployment profile configured, then you must re-deploy it.
+:::
