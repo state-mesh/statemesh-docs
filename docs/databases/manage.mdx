@@ -1,0 +1,26 @@
+---
+title: Manage your Database
+---
+
+import Figure from '@site/src/components/Figure';
+
+Once your database is deployed, you can manage it using the [StateMesh Console](https://console.cloud.statemesh.net) by going to the details page of your database.
+
+## Database Details
+General information about the database is available in the cards at the top of the page.
+
+Let's consider the following example:
+
+<Figure
+    src="/img/snippets/manage-database.png"
+    alt="Database details"
+/>
+
+The following information is available:
+
+- **Public endpoint**: Public hostname and port to access your database via internet. (Hover the info icon on the right to see an example on how you can connect using psql cli tool).
+- **Internal service endpoint**: Internal hostname and port. Use this to configure access from your apps.
+- **Password for postgres user**: The password of the database owner.
+- **Status**: The current status and lifecycle stage of the database.
+- **Project**: The project to which the database belongs.
+- **Resources**: The resources allocated to the database.

@@ -5,7 +5,7 @@ title: Virtual Machines in StateMesh
 Please familiarize yourself with the [StateMesh Concepts](../getting-started/concepts.mdx) before proceeding.
 
 :::info
-Virtual Machines are in Early Access Preview. This means that the feature is still in development and may change before it is released.
+Virtual Machines are in Early Access Preview. This means that the feature is still in development and may change before it is fully released.
 :::
 
 Virtual Machines in StateMesh are a way to run your own operating system on the StateMesh network. Virtual Machines are the lowest-level concept in StateMesh, and they are the unit of deployment.
